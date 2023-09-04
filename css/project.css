@@ -38,7 +38,7 @@ p {
   margin: 1em 0;
 }
 
-d1 {
+h1 {
   width: 100%;
   display: block;
   padding: 1em;
@@ -383,22 +383,25 @@ em * {
 }
 
 #shapes .t1 em::before {
-  content: "Width";
+  content: "Trees";
 }
 #shapes .d1 em::before {
-  content: "Height";
+  content: "Depth";
 }
 #shapes .c1 em::before {
-  content: "Channels";
+  content: "Classes";
 }
-#shapes .w2 em::before {
-  content: "Width";
+#shapes .i1 em::before {
+  content: "Decision Nodes";
 }
-#shapes .h2 em::before {
-  content: "Height";
+#shapes .l1 em::before {
+  content: "Leaf Nodes";
 }
-#shapes .k em::before {
-  content: "Channels";
+#shapes .p em::before {
+  content: "Parameters";
+}
+#shapes .f em::before {
+  content: "FLOPs";
 }
 
 /*# sourceMappingURL=project.css.map */
