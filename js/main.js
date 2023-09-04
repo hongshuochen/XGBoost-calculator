@@ -17,28 +17,31 @@ function main() {
     }
 
     function update_input_output() {
-        input_el.innerHTML = `${wrap_em("w1", v.w1.value)}×
-                              ${wrap_em("h1", v.h1.value)}×
-                              ${wrap_em("d1", v.d1.value)}`;
-        var w2 = Math.floor((v.w1.value - v.f.value + 2 * v.p.value) / v.s.value + 1);
-        var h2 = Math.floor((v.h1.value - v.f.value + 2 * v.p.value) / v.s.value + 1);
+        input_el.innerHTML = `${wrap_em("t1", v.t1.value)}×
+                              ${wrap_em("d1", v.d1.value)}×
+                              ${wrap_em("c1", v.c1.value)}`;
+        // var w2 = Math.floor((v.d1.value - v.f.value + 2 * v.p.value) / v.s.value + 1);
+        // var h2 = Math.floor((v.t1.value - v.f.value + 2 * v.p.value) / v.s.value + 1);
+        var i1 =  Math.pow(2*v.d1.value) - 1;
+        var l1 = Math.pow(2*v.t1.value);
+        var p1 = v.t1.value * v.c1.value * (i1*2 + l1);
 
         let message = "";
-        if (w2 < 1 || h2 < 1)
-        {
-            message = "Spatial extent can't be greater than padded input size. Increase P, increase H<sub>1</sub> / W<sub>1</sub>, or reduce F.";
-        } else if (!Number.isInteger(w2) || !Number.isInteger(h2)) {
-        }
+        // if (w2 < 1 || h2 < 1)
+        // {
+        //     message = "Spatial extent can't be greater than padded input size. Increase P, increase H<sub>1</sub> / W<sub>1</sub>, or reduce F.";
+        // } else if (!Number.isInteger(w2) || !Number.isInteger(h2)) {
+        // }
 
-        if (!Number.isInteger(w2) || w2 <= 0) {
-            w2 = "❓";
-        }
-        if (!Number.isInteger(h2) || h2 <= 0) {
-            h2 = "❓";
-        }
+        // if (!Number.isInteger(w2) || w2 <= 0) {
+        //     w2 = "❓";
+        // }
+        // if (!Number.isInteger(h2) || h2 <= 0) {
+        //     h2 = "❓";
+        // }
 
-        output_el.innerHTML = `${wrap_em("w2", w2)}×
-                              ${wrap_em("h2", h2)}×
+        output_el.innerHTML = `${wrap_em("i1", i1)}×
+                              ${wrap_em("l1", l1)}×
                               ${wrap_em("k", v.k.value)}`;
         message_el.innerHTML = message;
     }

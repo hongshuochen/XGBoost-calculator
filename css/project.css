@@ -38,7 +38,7 @@ p {
   margin: 1em 0;
 }
 
-h1 {
+d1 {
   width: 100%;
   display: block;
   padding: 1em;
@@ -194,7 +194,7 @@ body {
   padding: 16px;
 }
 
-h1 {
+d1 {
   font-size: 32px;
 }
 
@@ -347,18 +347,18 @@ em * {
   color: inherit;
 }
 
-.w1 em,
-.w1 input {
-  color: #d11f04;
-}
-
-.h1 em,
-.h1 input {
-  color: #c004b2;
+.t1 em,
+.t1 input {
+  color: #c11f04;
 }
 
 .d1 em,
 .d1 input {
+  color: #c004b2;
+}
+
+.c1 em,
+.c1 input {
   color: #6604c0;
 }
 
@@ -382,13 +382,13 @@ em * {
   color: #00bcd4;
 }
 
-#shapes .w1 em::before {
+#shapes .t1 em::before {
   content: "Width";
 }
-#shapes .h1 em::before {
+#shapes .d1 em::before {
   content: "Height";
 }
-#shapes .d1 em::before {
+#shapes .c1 em::before {
   content: "Channels";
 }
 #shapes .w2 em::before {
