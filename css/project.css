@@ -210,7 +210,7 @@ h4 {
 #parameters {
   position: relative;
   text-align: left;
-  margin-bottom: 4em;
+  /* margin-bottom: 4em; */
 }
 
 label {
@@ -235,11 +235,11 @@ label em::after {
 }
 label .value {
   display: inline-block;
-  width: 3em;
+  width: 4em;
   border: 0;
   -webkit-appearance: none;
   margin-left: 0;
-  margin-right: -2em;
+  margin-right: -3em;
 }
 label .value:focus {
   -webkit-appearance: none;
@@ -280,25 +280,31 @@ label input {
   width: 100%;
   position: absolute;
 }
+#param,
+#flop,
 #shapes #input,
 #shapes #output {
   padding: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1); 
   font-size: 1.5rem;
   text-align: center;
   margin: 1.5rem 4px 4px;
   height: 100%;
   justify-content: center;
   align-items: center;
-  width: 192px;
+  /* width: 192px; */
   height: 192px;
   position: relative;
   display: flex;
 }
+#param span,
+#flop span,
 #shapes #input span,
 #shapes #output span {
   font-size: inherit;
 }
+#param::before,
+#flop::before,
 #shapes #input::before,
 #shapes #output::before {
   display: block;
@@ -311,11 +317,13 @@ label input {
   transform: translateY(-100%);
   font-size: 1rem;
 }
+#param em::before,
+#flop em::before,
 #shapes #input em::before,
 #shapes #output em::before {
   position: relative;
   display: block;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
 #shapes #input {
   float: left;
@@ -332,7 +340,7 @@ label input {
 
 #credits {
   text-align: center;
-  padding-top: 4em;
+  padding-top: 2em;
   clear: both;
 }
 
@@ -347,28 +355,32 @@ em * {
   color: inherit;
 }
 
-.t1 em,
-.t1 input {
-  color: #c11f04;
+.w1 em,
+.w1 input {
+  color: #d11f04;
+}
+
+.h1 em,
+.h1 input {
+  color: #c004b2;
 }
 
 .d1 em,
 .d1 input {
-  color: #c004b2;
-}
-
-.c1 em,
-.c1 input {
   color: #6604c0;
 }
 
-.k em,
-.k input {
+.compare em,
+.compare input,
+.decision em,
+.decision input {
   color: #1889f5;
 }
 
-.f em,
-.f input {
+.add em,
+.add input,
+.leaf em,
+.leaf input {
   color: #ff8100;
 }
 
@@ -381,27 +393,44 @@ em * {
 .p input {
   color: #00bcd4;
 }
-
-#shapes .t1 em::before {
+#flop .w1 em::before,
+#param .w1 em::before {
   content: "Trees";
 }
-#shapes .d1 em::before {
+#flop .h1 em::before,
+#param .h1 em::before {
   content: "Depth";
 }
-#shapes .c1 em::before {
+#flop .d1 em::before,
+#param .d1 em::before {
   content: "Classes";
 }
-#shapes .i1 em::before {
+#param .decision em::before {
   content: "Decision Nodes";
 }
-#shapes .l1 em::before {
-  content: "Leaf Nodes";
-}
-#shapes .p em::before {
+#param .toal_param em::before {
   content: "Parameters";
 }
-#shapes .f em::before {
+#flop .toal_flop em::before {
   content: "FLOPs";
+}
+#flop .compare em::before {
+  content: "Comparison";
+}
+#flop .add em::before {
+  content: "Addition";
+}
+#param .leaf em::before {
+  content: "Leaf Nodes";
+}
+#shapes .w2 em::before {
+  content: "Width";
+}
+#shapes .h2 em::before {
+  content: "Height";
+}
+#shapes .k em::before {
+  content: "Channels";
 }
 
 /*# sourceMappingURL=project.css.map */

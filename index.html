@@ -16,35 +16,27 @@
         <div id="parameters">
             <h4>Input</h4>
             <div id="input_parameters">
-                <label class="t1">Trees <em>T<sub>1</sub></em><input type="range" min=1 max=1000 step=1 value=100 width=1000></input></label>
-                <label class="d1">Depth <em>D<sub>1</sub></em><input type="range" min=1 max=10 step=1 value=6 width=10></input></label>
-                <label class="c1">Classes <em>C<sub>1</sub></em><input type="range" min=1 max=10 step=1 value=1 width=10></input></label>
+                <label class="w1">Trees <em>T</em><input type="range" min=1 max=100000 step=1 value=100 width=256></input></label>
+                <label class="h1">Depth <em>D</em><input type="range" min=1 max=10 step=1 value=6 width=256></input></label>
+                <label class="d1">Classes <em>C</em><input type="range" min=2 max=10 step=1 value=2 width=256></input></label>
             </div>
-            <!-- <h4>Convolution</h4>
-            <div id="convolution_parameters">
-                <label class="k">Filter Count <em>K</em><input type="range" min=1 max=128 step=1 value=4></input></label>
+            <h4>Parameters</h4>
+            <div id="param"></div>
+            <!-- <div id="convolution_parameters">
+                <label class="k">Filter Count <em>K</em><input type="range" min=4 max=128 step=1 value=4></input></label>
                 <label class="f">Spatial Extent <em>F</em><input type="range" min=1 max=9 step=1 value=3></input></label>
                 <label class="s">Stride <em>S</em><input type="range" min=1 max=10 step=1 value=1></input></label>
                 <label class="p">Zero Padding <em>P</em><input type="range" min=0 max=8 step=0 value=0></input></label>
             </div> -->
+            <h4>FLOPS per sample</h4>
+            <div id="flop"></div>
             <!-- <div id="message"></div> -->
         </div>
-        <!-- <h4>Shapes</h4>
-        <div id="shapes">
-            <div id="input"></div>
-            <div id="arrow">→</div>
-            <div id="output"></div>
-        </div> -->
-        <h4>Parameters</h4>
-        <div id="shapes">
-            <div id="input"></div>
-        </div>
-        <h4>FLOPs</h4>
-        <div id="shapes">
-            <div id="output"></div>
-        </div>
         <div id="credits">
-            For more context, see the <a href="http://cs231n.github.io/convolutional-networks/" target="_blank">CS231n course notes</a> (search for "Summary").
+            For more context, see the <a href="https://xgboost.readthedocs.io/en/stable/tutorials/model.html" target="_blank">XGBoost</a>. <br>
+            For binary classification, the number of classes is set to 1. <br>
+            For multi-class classification, see the <a href="https://github.com/dmlc/xgboost/issues/4079#issuecomment-457315826" target="_blank">comments</a> for more details. <br>
+            The style of this website is borrowed from <a href="https://madebyollin.github.io/convnet-calculator/">here</a>.
         </div>
     </main>
 </body>
