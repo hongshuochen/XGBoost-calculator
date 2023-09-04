@@ -31,7 +31,7 @@ function main() {
                               ${wrap_em("decision", `(2 × (2<sup>${v.h1.value}</sup>-1))`)}+${wrap_em("leaf", `(1 × 2<sup>${v.h1.value}</sup>)`)}
                               ] = ${wrap_em("toal_param", toal_param.toLocaleString('en-US'))}`;
 
-        var total_flops = (v.h1.value+1) * v.w1.value * c;
+        var total_flops = (parseInt(v.h1.value)+1) * v.w1.value * c;
 
         flop_el.innerHTML = `${wrap_em("w1", v.w1.value)} ×
                             ${wrap_em("d1", c)} ×
